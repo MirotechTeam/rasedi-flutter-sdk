@@ -1,4 +1,4 @@
-## 0.0.1
+## 1.0.0
 
 * Initial release of the Rasedi Flutter SDK.
 * Support for creating, verifying, and cancelling payments.
