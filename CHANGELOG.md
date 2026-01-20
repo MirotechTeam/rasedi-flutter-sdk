@@ -7,3 +7,9 @@
 ## 1.0.1
 
 * Update API base URL to stage API.
+
+
+## 1.0.2
+
+* Add UI example for testing the SDK.
+

@@ -4,7 +4,7 @@ import 'models.dart';
 import 'auth.dart';
 
 class RasediClient {
-  static const String _apiBaseUrl = "https://stage.api.rasedi.com";
+  static const String _apiBaseUrl = "https://api.rasedi.com";
   static const int _upstreamVersion = 1;
 
   final Auth _auth;
