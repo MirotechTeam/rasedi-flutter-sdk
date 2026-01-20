@@ -13,7 +13,7 @@
     },
     {
       "name": "rasedi_flutter_sdk",
-      "version": "0.0.1",
+      "version": "1.0.1",
       "dependencies": [
         "basic_utils",
         "cryptography",
@@ -23,33 +23,12 @@
       ]
     },
     {
-      "name": "cryptography",
-      "version": "2.9.0",
-      "dependencies": [
-        "collection",
-        "crypto",
-        "ffi",
-        "meta",
-        "typed_data"
-      ]
-    },
-    {
       "name": "pointycastle",
       "version": "3.9.1",
       "dependencies": [
         "collection",
         "convert",
         "js"
-      ]
-    },
-    {
-      "name": "basic_utils",
-      "version": "5.7.0",
-      "dependencies": [
-        "http",
-        "json_annotation",
-        "logging",
-        "pointycastle"
       ]
     },
     {
@@ -75,33 +54,25 @@
       ]
     },
     {
-      "name": "typed_data",
-      "version": "1.4.0",
+      "name": "cryptography",
+      "version": "2.9.0",
       "dependencies": [
-        "collection"
-      ]
-    },
-    {
-      "name": "meta",
-      "version": "1.16.0",
-      "dependencies": []
-    },
-    {
-      "name": "ffi",
-      "version": "2.1.5",
-      "dependencies": []
-    },
-    {
-      "name": "crypto",
-      "version": "3.0.7",
-      "dependencies": [
+        "collection",
+        "crypto",
+        "ffi",
+        "meta",
         "typed_data"
       ]
     },
     {
-      "name": "collection",
-      "version": "1.19.1",
-      "dependencies": []
+      "name": "basic_utils",
+      "version": "5.7.0",
+      "dependencies": [
+        "http",
+        "json_annotation",
+        "logging",
+        "pointycastle"
+      ]
     },
     {
       "name": "js",
@@ -116,20 +87,18 @@
       ]
     },
     {
-      "name": "json_annotation",
-      "version": "4.9.0",
-      "dependencies": [
-        "meta"
-      ]
-    },
-    {
-      "name": "logging",
-      "version": "1.3.0",
+      "name": "collection",
+      "version": "1.19.1",
       "dependencies": []
     },
     {
       "name": "web",
       "version": "1.1.1",
+      "dependencies": []
+    },
+    {
+      "name": "meta",
+      "version": "1.16.0",
       "dependencies": []
     },
     {
@@ -170,6 +139,37 @@
     {
       "name": "characters",
       "version": "1.4.0",
+      "dependencies": []
+    },
+    {
+      "name": "typed_data",
+      "version": "1.4.0",
+      "dependencies": [
+        "collection"
+      ]
+    },
+    {
+      "name": "ffi",
+      "version": "2.1.5",
+      "dependencies": []
+    },
+    {
+      "name": "crypto",
+      "version": "3.0.7",
+      "dependencies": [
+        "typed_data"
+      ]
+    },
+    {
+      "name": "json_annotation",
+      "version": "4.9.0",
+      "dependencies": [
+        "meta"
+      ]
+    },
+    {
+      "name": "logging",
+      "version": "1.3.0",
       "dependencies": []
     },
     {
