@@ -13,3 +13,8 @@
 
 * Add UI example for testing the SDK.
 
+## 1.0.3
+
+* Added `history` array to PaymentResponseBody and introduced `PaymentHistoryItem` model.
+
+
