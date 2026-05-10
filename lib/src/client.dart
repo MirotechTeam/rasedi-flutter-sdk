@@ -101,6 +101,7 @@ class RasediClient {
   // We can add it if requested, similar to python/go.
   // For now, let's keep it defined but simple.
   
+  @Deprecated('Use status checking or webhooks instead.')
   Future<Map<String, dynamic>> verify(VerifyPayload payload) async {
       // Placeholder for verification logic
       throw UnimplementedError("Verify not implemented yet");

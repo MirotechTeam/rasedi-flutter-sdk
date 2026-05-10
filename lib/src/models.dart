@@ -170,6 +170,7 @@ class CancelPaymentResponseBody {
   }
 }
 
+@Deprecated('Use status checking or webhooks instead.')
 class VerifyPayload {
   final String keyId;
   final String? content;
