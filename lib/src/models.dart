@@ -94,6 +94,44 @@ class PaymentDetailsResponse {
   });
 }
 
+class PaymentHistoryItem {
+  final String referenceCode;
+  final PaymentStatus status;
+  final String amount;
+  final String? gateway;
+  final String? paidAt;
+  final String? payoutAmount;
+  final String? serviceFeeAmount;
+  final String? gatewayFeeAmount;
+  final String? expiresAt;
+
+  PaymentHistoryItem({
+    required this.referenceCode,
+    required this.status,
+    required this.amount,
+    this.gateway,
+    this.paidAt,
+    this.payoutAmount,
+    this.serviceFeeAmount,
+    this.gatewayFeeAmount,
+    this.expiresAt,
+  });
+
+  factory PaymentHistoryItem.fromJson(Map<String, dynamic> json) {
+    return PaymentHistoryItem(
+      referenceCode: json['referenceCode'],
+      status: PaymentStatus.values.byName(json['status']),
+      amount: json['amount'],
+      gateway: json['gateway'],
+      paidAt: json['paidAt'],
+      payoutAmount: json['payoutAmount'],
+      serviceFeeAmount: json['serviceFeeAmount'],
+      gatewayFeeAmount: json['gatewayFeeAmount'],
+      expiresAt: json['expiresAt'],
+    );
+  }
+}
+
 class PaymentDetailsResponseBody {
   final String referenceCode;
   final String amount;
@@ -102,6 +140,7 @@ class PaymentDetailsResponseBody {
   final String redirectUrl;
   final PaymentStatus status;
   final String? payoutAmount;
+  final List<PaymentHistoryItem> history;
 
   PaymentDetailsResponseBody({
     required this.referenceCode,
@@ -111,6 +150,7 @@ class PaymentDetailsResponseBody {
     required this.redirectUrl,
     required this.status,
     this.payoutAmount,
+    this.history = const [],
   });
 
   factory PaymentDetailsResponseBody.fromJson(Map<String, dynamic> json) {
@@ -122,6 +162,10 @@ class PaymentDetailsResponseBody {
       redirectUrl: json['redirectUrl'],
       status: PaymentStatus.values.byName(json['status']),
       payoutAmount: json['payoutAmount'],
+      history: (json['history'] as List<dynamic>?)
+              ?.map((e) => PaymentHistoryItem.fromJson(e))
+              .toList() ??
+          [],
     );
   }
 }
